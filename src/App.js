@@ -1,47 +1,17 @@
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import ProgressIndicator from './components/ProgressIndicator';
-import QuestionBox from './components/QuestionBox';
+import CompletionPage from './pages/CompletionPage';
+import SurveyPage from './pages/SurveyPage';
 
 function App() {
-  const questions = [
-    {
-      title: '질문1 입니다.',
-      desc: '설명1 입니다.',
-      type: 'text',
-      required: false,
-      options: {},
-    },
-    {
-      title: '질문2 입니다.',
-      desc: '설명2입니다.',
-      type: 'text',
-      required: false,
-      options: {},
-    },
-  ];
-
-  const step = 0;
-
-  const [answers, setAnswers] = useState([]);
-
   return (
     <div className="App">
-      <ProgressIndicator />
-      <QuestionBox
-        question={questions[step]}
-        questionsLength={questions.length}
-        step={step}
-        answer={answers[step]}
-        setAnswer={(answer) => {
-          setAnswers((prev) => {
-            const newAnswers = [...prev];
-            newAnswers[step] = answer;
-
-            return newAnswers;
-          });
-        }}
-      />
+      <Routes>
+        <Route path="/done" element={<CompletionPage />} />
+        <Route path="/survey/:surveyId" element={<SurveyPage />}>
+          <Route path=":step" element={<SurveyPage />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
