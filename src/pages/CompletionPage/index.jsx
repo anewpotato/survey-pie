@@ -1,3 +1,10 @@
+import styled from 'styled-components';
+
+const CompletionPageWrapper = styled.div`
+  background: aqua;
+  padding: ${123}em;
+`;
+
 export default function CompletionPage() {
-  return <div>Completion Page</div>;
+  return <CompletionPageWrapper>Completion Page</CompletionPageWrapper>;
 }

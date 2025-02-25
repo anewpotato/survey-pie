@@ -14,7 +14,12 @@ export default function QuestionBox({
     <div>
       <Title>{question.title}</Title>
       <Desc>{question.desc}</Desc>
-      <Body type={question.type} answer={answer} setAnswer={setAnswer} />
+      <Body
+        type={question.type}
+        answer={answer}
+        setAnswer={setAnswer}
+        options={question.options}
+      />
       <ActionButtons questionsLength={questionsLength} step={step} />
     </div>
   );

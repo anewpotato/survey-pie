@@ -13,14 +13,25 @@ export default function SurveyPage() {
       desc: '설명1 입니다.',
       type: 'text',
       required: false,
-      options: {},
+      options: {
+        placeholder: 'placeholder 입니다.',
+      },
     },
     {
       title: '질문2 입니다.',
       desc: '설명2입니다.',
-      type: 'text',
+      type: 'textarea',
       required: false,
-      options: {},
+      options: { placeholder: 'placeholder 입니다.' },
+    },
+    {
+      title: '질문3 입니다.',
+      desc: '설명3입니다.',
+      type: 'select',
+      required: false,
+      options: {
+        items: ['답변1', '답변2', '답변3', '답변4'],
+      },
     },
   ];
 
