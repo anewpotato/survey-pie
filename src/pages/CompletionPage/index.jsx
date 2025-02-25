@@ -1,3 +1,4 @@
 export default function CompletionPage() {
-  return <div>Completion Page</div>;
+  const test = 'aa';
+  return <div>{test}</div>;
 }
