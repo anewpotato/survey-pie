@@ -11,6 +11,10 @@
 - [서비스 기획서](./documents/SurveyPie%20서비스%20기획서.pdf)
 - [디자인 가이드](./documents/SurveyPie%20디자인%20가이드.pdf)
 
+## 강의 내 제공 서버
+
+- https://github.com/anewpotato/survey-pie-server
+
 ## 설치 및 실행
 
 ### `npm install`
