@@ -7,6 +7,7 @@ export default function TextInput({ answer = '', setAnswer, options }) {
       value={answer}
       onChange={(e) => setAnswer(e.target.value)}
       placeholder={options.placeholder}
+      maxLength={options?.max}
     />
   );
 }

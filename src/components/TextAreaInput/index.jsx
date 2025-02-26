@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-export default function TextAreaInput({ answer, setAnswer, options }) {
+export default function TextAreaInput({ answer = '', setAnswer, options }) {
   return (
     <TextArea
       type="text"
-      value={answer || ''}
+      value={answer}
       onChange={(e) => setAnswer(e.target.value)}
       placeholder={options.placeholder}
+      maxLength={options?.max}
     />
   );
 }
