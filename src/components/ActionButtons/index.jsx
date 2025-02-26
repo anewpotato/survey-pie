@@ -17,7 +17,7 @@ export default function ActionButtons() {
   const questionsLength = useRecoilValue(questionsLengthState);
   const isRequired = useRequiredOption();
 
-  const answers = useAnswers();
+  const [answers, setAnswers] = useAnswers();
 
   const [isPosting, setIsPosting] = useState(false);
 
@@ -44,6 +44,7 @@ export default function ActionButtons() {
             setIsPosting(true);
             postAnswers(surveyId, answers)
               .then(() => {
+                setAnswers([]);
                 navigate(`/done/${surveyId}`);
               })
               .catch((error) => {
